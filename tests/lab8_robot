@@ -1,6 +1,14 @@
 *** Settings ***
-Documentation     Lab 8 Robot Framework Test
+Documentation     Lab 8.5 - Jenkins + Robot Framework UAT Test
+Library           BuiltIn
 
 *** Test Cases ***
-Sample Test
-    Log    Jenkins + Robot Framework is working correctly
+System Is Ready
+    [Documentation]    ตรวจสอบว่า Jenkins สามารถรัน Robot Framework ได้
+    Log    Jenkins and Robot Framework are running correctly
+    Should Be True    ${True}
+
+Basic Calculation Test
+    [Documentation]    ทดสอบการคำนวณพื้นฐาน
+    ${result}=    Evaluate    2 + 3
+    Should Be Equal As Integers    ${result}    5
