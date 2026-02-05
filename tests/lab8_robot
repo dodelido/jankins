@@ -1,0 +1,6 @@
+*** Settings ***
+Documentation     Lab 8 Robot Framework Test
+
+*** Test Cases ***
+Sample Test
+    Log    Jenkins + Robot Framework is working correctly
